@@ -6,5 +6,11 @@ new Vue({
       data: {
             name: "Deep",
             job: "Student"
+      },
+      methods: {
+            greet: function (time) {
+                  // this.data.name    // no need to write data, we can directly access the name variable using this.name
+                  return 'Good ' + time + ' ' + this.name;
+            }
       }
 })
