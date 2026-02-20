@@ -1,0 +1,13 @@
+/* Styles for the canvas div */
+#canvas{
+      /* Width of the canvas */
+      width: 600px;
+      /* Padding inside */
+      padding: 200px 20px;
+      /* Center text */
+      text-align: center;
+      /* Black border */
+      border: 5px solid black;
+      /* Center the element horizontally and add vertical spacing */
+      margin: 20px auto;
+}
