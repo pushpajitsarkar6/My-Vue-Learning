@@ -11,6 +11,9 @@
       <!-- This div is controlled by Vue.js and will display dynamic data -->
       <div id="vue-controlled">
             <h2>{{greet('morning')}}</h2>
+            <a v-bind:href="website" target="_blank">A helpful resource for this course.</a>
+            <p v-html="websiteTag"></p>
+            <input type="text" v-bind:value="courseName" />
             <p>Name : {{name}}</p>
             <p>Job : {{job}}</p>
       </div>
