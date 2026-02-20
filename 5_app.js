@@ -27,6 +27,9 @@ new Vue({
                   // Set y to mouse offset Y
                   this.y = event.offsetY;
             },
+            clickResult: function () {
+                  alert("SAY NO TO ANY DISTRACTIONS LIKE INSTAGRAM!!!!!!!!");
+            }
       },
 
 });
