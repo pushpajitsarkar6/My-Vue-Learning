@@ -16,7 +16,8 @@
             <p>My age is : {{age}}</p>
 
             <!-- Subtract 10 years on double click -->
-            <button @dblclick="subMethod(10)">Subtract 10 years.</button>
+            <button @dblclick.once="subMethod(10)">Subtract 10 years(once).</button>
+            <!-- .once modifier ensures the event is triggered only once -->
             <!-- Subtract 1 year on click -->
             <button v-on:click="subMethod(1)">Subtract a year.</button>
 
@@ -29,6 +30,11 @@
 
             <!-- Canvas div that updates coordinates on mouse move -->
             <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}</div>
+
+
+
+            <a v-on:click.prevent="clickResult" href="https://www.instagram.com">Would you like to watch some Funny
+                  reels??🌚</a>
 
       </div>
 
