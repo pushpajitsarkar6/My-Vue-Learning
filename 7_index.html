@@ -14,9 +14,12 @@
       <div id="Joining-Vue">
             <h1>Keyboard Events</h1>
             <label>Name:</label>
-            <input type="text" v-on:keyup.enter="logName" /> <!-- Enter to log name -->
-            <label>Age:</label>
-            <input type="text" v-on:keyup.ctrl.enter="logAge" /> <!-- Ctrl + Enter to log age -->
+            <input type="text" v-model="name" v-on:keyup.enter="logName" /> <!-- Enter to log name -->
+            <span>Hello my name is : {{name}}</span>
+            <br><br>
+            <label>Current Year :</label>
+            <input type="text" v-model="age" @keyup.enter="logAge" /> <!-- Ctrl + Enter to log age -->
+            <span>My age is : {{age}}</span>
       </div>
 
       <script src="7_app.js"></script>

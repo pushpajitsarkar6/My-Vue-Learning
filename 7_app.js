@@ -1,14 +1,15 @@
 new Vue({
       el: "#Joining-Vue",
       data: {
-
+            name: "",
+            age: "",
       },
       methods: {
             logName: function () {
-                  console.log("You entered your name");
+                  this.name = this.name.toUpperCase();
             },
             logAge: function () {
-                  console.log("You entered your age");
+                  this.age = this.age - 2004;
             }
       }
 })
