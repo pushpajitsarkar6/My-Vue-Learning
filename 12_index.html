@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <title>RDJ - Vue App</title>
+      <link href="12_style.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+
+      <div id="Vue-app-12">
+            <h3>Looping through the list of characters of RDJ : </h3>
+            <ul>
+                  <li v-for="character in characters">{{character}}</li>
+            </ul>
+
+            <h3>Looping through the list of friends of RDJ : </h3>
+            <ul>
+                  <li v-for="friend in friends">{{friend.name}} - {{friend.age}}
+                  </li>
+            </ul>
+
+
+            <h2>Looping through the list of friends of RDJ using (List object, index) : </h2>
+            <!--<div> cannot be used here as it will create an extra div for each friend, which is not desired. So we use template instead which does not render any element in the DOM. -->
+            <template v-for="(friend,index) in friends">
+                  <h3>{{index+1}}.{{friend.name}}:</h3>
+                  <p>Age - {{friend.age}}</p>
+                  <p>Character played in/as - {{friend.movies}}</p>
+            </template>
+
+
+            <h2>Looping through the list of friends of RDJ using (val, key) : </h2>
+            <template v-for="friend in friends">
+                  <!-- This is also correct but we cannot access the index of the friend in this case, so we cannot display the serial number of the friend. -->
+                  <h3>{{friend.name}} : </h3>
+                  <div v-for="(val,key) in friend">
+                        <p>{{key}} - {{val}}</p>
+                  </div>
+            </template>
+      </div>
+
+      <script src="12_app.js"></script>
+</body>
+
+</html>
