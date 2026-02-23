@@ -1,28 +1,36 @@
-var one = new Vue({
-      el: '#vue-app-14-1',
-      data: {
-            name: "Vue.js instance 1"
+var nameData = {        // external data reffed by component
+      name: "Deep"
+}
+
+
+Vue.component('greeting', {      // global component       // its `Vue` not `vue`
+      template: '<p>Hello i am {{name}}!  <button v-on:click="changeName">Change name</button></p>',
+
+      data: function () {       // with internal data   // effects only a particular instance of component
+            return {
+                  name: "Deep"
+            }
       },
+      // data: function () {       // with external data   // effects all instances of component
+      //       return nameData;
+      // },
+
+
       methods: {
-            greet: function () {
-                  return "Hello from app one.";
+            changeName: function () {
+                  this.name = "Pushpajit";
             }
       }
+
+})
+
+
+var one = new Vue({
+      el: '#vue-app-14-1',
+
 });
 
 var two = new Vue({
       el: '#vue-app-14-2',
-      data: {
-            name: "Vue.js Instance 2"
-      },
-      methods: {
-            greet: function () {
-                  return "Hello from app two.";
-            },
-            changeTitle: function () {
-                  one.name = "Title changed of app one from app two.";
-            }
-      }
-});
 
-two.name = "Title of app two changed from outside."
+});

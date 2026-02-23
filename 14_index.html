@@ -9,16 +9,15 @@
 </head>
 
 <body>
-      <h1>Multiple Vue Instances</h1>
+      <h1>Components</h1>
       <div id="vue-app-14-1">
-            <h2>{{name}}</h2> <!-- This is the first Vue instance -->
-            <p>{{greet()}}</p>
+            <h2>Vue app one</h2> <!-- This is the first Vue instance -->
+            <greeting></greeting> <!-- This is the component -->
       </div>
 
       <div id="vue-app-14-2">
-            <h2>{{name}}</h2> <!-- This is the second Vue instance -->
-            <p>{{greet()}}</p>
-            <button v-on:click="changeTitle">Change app one title</button>
+            <h2>Vue app two</h2> <!-- This is the second Vue instance -->
+            <greeting></greeting>
       </div>
 
       <script src="14_app.js"></script>
