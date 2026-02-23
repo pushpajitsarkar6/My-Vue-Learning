@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <title>VueJS Learning</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+
+      <div id="vue-app-16">
+            <h1>Refs in Vue</h1>
+
+            <input type="text" ref="ref_of_input" v-on:keyup.enter="readRefs" />
+            <button v-on:click="readRefs">Submit</button>
+            <p>Your favorite food is : {{output}}</p>
+
+            <div ref="ref2_of_div">Hello</div>
+
+      </div>
+
+      <script src="16_app.js"></script>
+</body>
+
+</html>
