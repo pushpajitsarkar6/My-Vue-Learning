@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <title>VueJS learnings</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+
+<body>
+      <h1>Multiple Vue Instances</h1>
+      <div id="vue-app-14-1">
+            <h2>{{name}}</h2> <!-- This is the first Vue instance -->
+            <p>{{greet()}}</p>
+      </div>
+
+      <div id="vue-app-14-2">
+            <h2>{{name}}</h2> <!-- This is the second Vue instance -->
+            <p>{{greet()}}</p>
+            <button v-on:click="changeTitle">Change app one title</button>
+      </div>
+
+      <script src="14_app.js"></script>
+</body>
+
+</html>
